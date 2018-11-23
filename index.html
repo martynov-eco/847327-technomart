@@ -7,18 +7,16 @@
   <body>
       <header class="page-header">
           <div class="header-top">
-              <a class="header-logo">
-                  ТЕХНОМАРТ
-              </a>
+              <a class="header-logo">ТЕХНОМАРТ</a>
               <form class="search-form" action="/echo" method="get">
                   <label for="search">Поиск:</label>
                   <input type="search" id="search">
-                  <button class="search-button"></button>
+                  <button class="visually-hidden" type="submit"></button>
               </form>
               <a class="bookmarks" href="#">
                   Закладки:&#160;<span>0</span>
               </a>
-              <a class="bin" href="#">
+              <a class="cart" href="#">
                   Корзина:&#160;<span>0</span>
               </a>
               <a class="order-button" href="#">
@@ -26,9 +24,7 @@
               </a>
           </div>
           <div class="header-middle">
-              <h1>
-                  Интернет-магазин строительных материалов иинструментов для ремонта <!-- выделить этот текст заголовком, подсказали на вебинаре, но только на главной странице -->
-              </h1>
+              <h1>Интернет-магазин строительных материалов иинструментов для ремонта</h1>
               <div class="header-contacts">
                   <a class="phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
                   <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
@@ -171,12 +167,12 @@
               </ul>
           </section>
 
-          <section class="popular-producers">
+          <section class="brands">
               <div class="section-title">
                   <h2>Популярные производители</h2>
                   <a class="button" href="#">Все производители</a>
               </div>
-              <ul class="popular-producers-list">
+              <ul class="brands-list">
                   <li class="list-item">
                     <a href="#"><img src="img/pr-bosch.png" alt="BOSCH" width="126" height="37"></a>
                   </li>
@@ -210,20 +206,34 @@
                   </li>
               </ul>
           </section>
-<!-- раздел Сервисы, сверстаем позже
-          <section class="services">
+
+          <section class="service">
               <h2>Сервисы</h2>
               <p>
                   Хороший интернет-магазин отличается от плохого не только ценами!
                   Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
               </p>
-              <div class="slider">
+              <div class="service-slider">
                   <ul class="slider-buttons">
-                      <li class="list-item"><button>Досавка</button></li>
-                      <li class="list-item"><button>Гарантия</button></li>
-                      <li class="list-item"><button>Кредит</button></li>
+                      <li class="delivery-button">
+                          <label>Доставка
+                              <input type="radio" name="slider-button">
+                          </label>
+                      </li>
+
+                      <li class="garanty-button">
+                          <label>Гарантия
+                              <input type="radio" name="slider-button">
+                          </label>
+                      </li>
+
+                      <li class="kredit-button">
+                          <label>Кредит
+                              <input type="radio" name="slider-button">
+                          </label>
+                     </li>
                   </ul>
-                  <div class="slider-info">
+                  <div class="slider-content">
                       <div class="slider-delivery">
                           <h3>Доставка</h3>
                           <p>
@@ -254,11 +264,9 @@
                   </div>
               </div>
           </section>
-          -->
+
           <section class="about-us">
-              <h2>
-                  КОМПАНИЯ «Техномарт»
-              </h2>
+              <h2>КОМПАНИЯ «Техномарт»</h2>
               <p>
                   Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
               </p>
@@ -274,9 +282,7 @@
               <a class="button" href="#">ПОДРОБНЕЕ О КОМПАНИИ</a>
           </section>
           <section class="contacts">
-              <h2>
-                  КОНТАКТЫ
-              </h2>
+              <h2>КОНТАКТЫ</h2>
               <p>
                   Вы можете забрать товар сами,
                   заехав в наш офис:
@@ -293,9 +299,7 @@
 
       <footer class="page-footer">
         <div class="footer-top">
-            <a class="footer-logo">
-                ТЕХНОМАРТ
-            </a>
+            <a class="footer-logo">ТЕХНОМАРТ</a>
             <div class="footer-contacts">
                 <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
                 <span>+7 (812) 555-05-55</span>
@@ -336,6 +340,32 @@
               </P>
           </div>
       </footer>
+
+      <section class="modal modal-map">
+          <h2 class="visually-hidden">Как до нас добраться</h2>
+          <img src="img/big-map.jpg" width="940" height="446" alt="Схема проезда в магазин по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+          <button class="modal-close" type="button">Закрыть</button>
+      </section>
+
+      <section class="modal modal-write-us">
+          <h2 class="visually-hidden">Напишите нам</h2>
+          <form class="write-us-form" action="/echo" method="post">
+              <p>
+                  <label for="users-name">Ваше имя:</label>
+                  <input type="text" id="users-name" placeholder="Имя Фамилия">
+              </p>
+              <p>
+                  <label for="users-email">Ваш e-mail:</label>
+                  <input type="email" id="users-email" placeholder="example@mail.ru">
+              </p>
+              <p>
+                  <label for="users-message">Текст письма</label>
+                  <textarea id="users-message" placeholder="В свободной форме"></textarea>
+              </p>
+              <button class="button" type="submit">Отправить</button>
+              <button class="modal-close" type="button">Закрыть</button>
+          </form>
+      </section>
 
 
   </body>
