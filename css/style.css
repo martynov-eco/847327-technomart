@@ -368,8 +368,7 @@ a {
     text-transform: uppercase;
 }
 
-.filters,
-.item-catalog {
+.filters {
     font-family: "PT Sans", Arial, sans-serif;
     color: #000000;
 }
@@ -403,65 +402,78 @@ a {
     line-height: 18px;
 }
 
-.item-catalog ul {
+.item-catalog ul,
+.popular-items ul {
     list-style: none;
 }
 
-.item-catalog a {
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: 700;
+.popular-items-list .list-item-title,
+.catalog-list .catalog-item-title {
+    font-family: "PT Sans", Arial, sans-serif;
     color: #000000;
 }
 
-.previous-price {
+.popular-items-list .previous-price,
+.catalog-list .previous-price {
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 17px;
     line-height: 18px;
     text-decoration: line-through;
 }
 
-.current-price {
+.popular-items-list .current-price,
+.catalog-list .current-price {
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 17px;
     line-height: 18px;
     color: #ffffff;
+    font-weight: normal;
 
     background-color: #ee3643;
 }
 
-.catalog-item-buttons {
+.catalog-item-buttons,
+.list-item-buttons {
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 14px;
     line-height: 18px;
+    font-weight: normal;
 
 }
 
-.catalog-item-buttons .buy-button {
+.catalog-item-buttons .buy-button,
+.list-item-buttons .buy-button {
     color: #ffffff;
 
     background-color: #63a63e;
 }
 
-.catalog-item-buttons .buy-button:hover {
+.catalog-item-buttons .buy-button:hover,
+.list-item-buttons .buy-button:hover {
     background-color: #5fbb2d;
 }
 
-.catalog-item-buttons .buy-button:active {
+.catalog-item-buttons .buy-button:active,
+.list-item-buttons .buy-button:active {
     background-color: #518534;
 }
 
-.catalog-item-buttons .bookmarks-button {
+.catalog-item-buttons .bookmarks-button,
+.list-item-buttons .bookmarks-button {
     color: #32425c;
 
     border-color: #63a63e;
     background-color: #ffffff;
 }
 
-.catalog-item-buttons .bookmarks-button:hover {
+.catalog-item-buttons .bookmarks-button:hover,
+.list-item-buttons .bookmarks-button:hover {
     border-color: #32425c;
 
 }
 
-.catalog-item-buttons .bookmarks-button:active {
+.catalog-item-buttons .bookmarks-button:active,
+.list-item-buttons .bookmarks-button:active {
     color: rgba(50, 66, 92, 0.3);
 
     opacity: 30%;
