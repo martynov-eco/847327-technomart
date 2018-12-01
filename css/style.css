@@ -35,12 +35,21 @@ a {
   text-decoration: none;
 }
 
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
 .button {
     font-size: 14px;
     line-height: 18px;
     color: #ffffff;
     text-transform: uppercase;
-
+    text-align: center;
+    
     background-color: #ee3643;
 }
 
@@ -60,72 +69,124 @@ a {
     background-color: #293449;
 }
 
-.header-logo {
+.header-top-container {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+    outline: 2px solid green;
+}
+
+.header-top-container .header-logo {
+    width: 220px;
+    margin-right: 10px;
+
     font-size: 24px;
     line-height: 24px;
     text-transform: uppercase;
+    text-align: center;
 
     background-color: #ee3643;
 }
 
-.header-logo:hover {
+.header-top-container .header-logo:hover {
     background-color: #ca2c37;
 }
 
-.header-logo:active {
+.header-top-container .header-logo:active {
     background-color: #ba2732;
 }
 
-.header-top a {
+.header-top-container a {
     color: #ffffff;
 }
 
-.header-top input[type="search"] {
+.header-top-container .search-form {
+    margin-right: auto;
+}
+
+.header-top-container input[type="search"] {
     background-color: #293449;
     border: none;
 }
 
-.header-top .cart:hover,
-.header-top .bookmarks:hover,
-.header-top input[type="search"]:hover {
+.header-top-container .cart:hover,
+.header-top-container .bookmarks:hover,
+.header-top-container input[type="search"]:hover {
     background-color: #212a3a;
 }
 
-.header-top .cart:active,
-.header-top .bookmarks:active {
+.header-top-container .cart:active,
+.header-top-container .bookmarks:active {
     background-color: #161d29;
 }
 
-.header-top input[type="search"]:focus {
+.header-top-container input[type="search"]:focus {
     color: #000000;
 
     background-color: #ffffff;
 }
 
-.header-top .order-button {
+.header-top-container .order-button {
     background-color: #63a63e;
 }
 
-.header-top .order-button:hover {
+.header-top-container .order-button:hover {
     background-color: #5fbb2d;
 }
 
-.header-top .order-button:active {
+.header-top-container .order-button:active {
     color: rgba(255, 255, 255, 0.5);
 
     background-color: #518534;
 }
 
-.header-bottom {
+.header-bottom-wrapper {
     background-color: #f3f7f9;
+    margin-bottom: 23px;
 }
 
-.header-bottom a {
+.header-bottom-container {
+    width: 940px;
+    margin: 0 auto;
+    
+}
+
+.header-bottom-container .company-info {
+    display: flex;
+    outline: 2px solid green;
+    padding-left: 50px;
+}
+
+.company-info h1,
+.company-info strong {
+    width: 200px;
+    margin: 0;
+    margin-right: 69px;
+    outline: 2px solid red;
+    
+}
+
+.company-info .header-contacts {
+    width: 270px;
+    margin-right: 70px;
+    text-align: center;
+    outline: 2px solid red;
+}
+
+.company-info .account {
+    display: flex;
+    width: 281px;
+    text-align: center;
+    
+    outline: 2px solid red;
+}
+
+.header-bottom-container a {
     color: #ffffff;
 }
 
-.header-bottom h1,
-.header-bottom strong {
+.header-bottom-container h1,
+.header-bottom-container strong {
     font-size: 16px;
     font-style: italic;
     font-weight: normal;
@@ -133,29 +194,43 @@ a {
     color: #ee3643;
 }
 
-.header-bottom .phone {
+.header-bottom-container .phone {
     font-size: 21px;
     line-height: 21px;
     color: #ee3643;
 }
 
-.header-bottom address {
+.header-bottom-container address {
     font-size: 14px;
     font-style: normal;
     line-height: 24px;
     color: #32425c;
+    
 }
 
-.header-bottom ul {
+.header-bottom-container ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .account a {
+    display: block;
+
     font-size: 21px;
     line-height: 21px;
     color: #000000;
-
+    outline: 1px solid black;
     background-color: #ffffff;
+}
+
+.account li:nth-child(1) {
+    width: 121px;
+    margin-right: 10px;
+}
+
+.account li:nth-child(2) {
+    width: 150px;
 }
 
 .account a:hover {
@@ -166,11 +241,14 @@ a {
     color: rgba(0, 0, 0, 0.3);
 }
 
-.header-bottom .main-nav {
-    font-size: ;
-    line-height: ;
+.header-bottom-container .main-nav {
+    display: flex;
+    justify-content:space-between;
+    padding-left: 50px;
+    padding-right: 52px;
 
     background-color: #32425c;
+    outline: 2px solid green;
 }
 
 .main-nav a:hover {
@@ -184,14 +262,18 @@ a {
 }
 
 /** КРАСНАЯ ОБЛАСТЬ МАКЕТА, СТИЛИЗУЕМ ЕЕ ПОТОМ **/
-
-.about-us {
-    background-color: #ffffff;
+.main-wrapper {
+    width: 940px;
+    margin: 0 auto;
 }
 
+.popular-items h2,
+.brands h2,
+.service h2,
 .about-us h2,
 .contacts h2,
-.about-items h2 {
+.about-items-container h2 {
+    margin: 0;
     font-size: 30px;
     font-weight: normal;
     line-height: 30px;
@@ -200,10 +282,101 @@ a {
 
 .about-us p,
 .contacts p,
-.about-items p {
+.about-items-container p {
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
+    margin: 0;
+}
+
+.popular-items .section-title {
+    display: flex;
+    justify-content: space-between;
+    padding-left:30px;
+    padding-right: 24px;
+    margin-bottom: 20px;
+    
+    background-color: #f9f5f0;
+    color: #32425c;
+
+    outline: 2px solid green;
+}
+
+.popular-items .button-popular-items {
+    width: 253px;
+}
+
+.popular-items .popular-items-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    
+    outline: 2px solid green;
+}
+
+.popular-items-list li {
+
+    border: 1px solid #ebebeb;
+}
+.popular-items-list li:not(:last-child) {
+    margin-right: 20px;
+}
+.brands .section-title {
+    display: flex;
+    justify-content: space-between;
+    padding-left:30px;
+    padding-right: 24px;
+    margin-bottom: 20px;
+    
+    background-color: #f9f5f0;
+    color: #32425c;
+
+    outline: 2px solid green;
+}
+
+.brands .button-brands {
+    width: 253px;
+}
+
+.brands .brands-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    outline: 2px solid green;
+}
+
+.brands-list li {
+    width: 220px;
+    height: 145px;
+    border: 1px solid #ebebeb; 
+    margin-bottom: 20px;
+}
+
+.service {
+    margin-bottom: 20px;
+
+    background-color: #f4f8fa;
+
+    outline: 2px solid green;
+}
+
+.section-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 88px;
+
+    outline: 2px solid green;
+}
+
+.section-wrapper .about-us {
+    width: 540px;
+    background-color: #ffffff;
 }
 
  .about-us ul {
@@ -212,18 +385,53 @@ a {
     line-height: 20px;
  }
 
+.about-us .button-about-us {
+    display: block;
+    width: 220px;
+}
+
+ .section-wrapper .contacts {
+     width: 300px;
+ }
+
+.contacts .button-write-us {
+    display: block;
+    width: 100%;
+}
+
+.footer-top-wrapper {
+    background-color: #32425c;
+}
+
+.footer-bottom-wrapper {
+    background-color: #293449;
+}
+
 .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    width: 940px;
+    margin: 0 auto;
+
     font-size: 18px;
     line-height: 24px;
     color: #ffffff;
 
-    background-color: #32425c;
+    outline: 2px solid green;
+
+    
 }
 
 .footer-logo {
+    width: 220px;
+    height: 63px;
+    display: block;
+    margin-right: 170px;
+
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
+    text-align: center;
     color: #ffffff;
 
     background-color: #ee3643;
@@ -237,11 +445,28 @@ a {
     background-color: #ba2732;
 }
 
+.footer-contacts {
+    margin-right: auto;
+    outline: 1px solid red;
+}
+
 .footer-top address {
     font-style: normal;
 }
 .footer-top ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.first-nav-list {
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    margin: 0;
+    padding: 0;
+    
+    outline: 1px solid red;
 }
 
 .first-nav-list a {
@@ -255,6 +480,16 @@ a {
 .first-nav-list a:active {
     color: rgba(241, 245, 247, 0.5);
     text-decoration: none;
+}
+
+.second-nav-list {
+    display: flex;
+    justify-content: space-between;
+    width: 526px;
+    margin: 0;
+    padding: 0;
+
+    outline: 1px solid red;
 }
 
 .second-nav-list a {
@@ -271,15 +506,35 @@ a {
 }
 
 .footer-bottom {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+
     font-size: 16px;
     line-height: 18px;
     color: #ffffff;
 
-    background-color: #293449;
+    outline: 2px solid green;
+
+    
 }
 
 .footer-bottom ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-bottom .footer-copyrights {
+    width: 230px;
+    margin-right: 160px;
+}
+
+.footer-bottom .social {
+    width: 135px;
+    margin-right: auto;
+
+    outline: 1px solid red;
 }
 
 .footer-bottom .social-button {
@@ -291,6 +546,19 @@ a {
 .footer-bottom .social-button:hover,
 .footer-bottom .social-button:active {
     background-color: #ee3643;
+}
+
+.feedback {
+    width: 140px;
+    margin-right: 20px;
+
+    outline: 1px solid red;
+}
+
+.developers {
+    width: 112px;
+
+    outline: 1px solid red;
 }
 
 .feedback a,
@@ -319,21 +587,39 @@ a {
     background-color: #ee3643;
 }
 
-.user-account a {
+.user-account-login {
+    display: flex;
+    width: 300px;
+
+    background-color: #ffffff; 
+
+    outline: 1px solid red;
+}
+
+.user-account-login a {
     font-size:21px;
     line-height: 21px;
     color: #000000;
 }
 
-.user-account a:active {
+.user-account-login a:active {
     color: rgba(0, 0, 0, 0.3);
+}
+.user-account {
+    outline: 2px solid red;
+}
+
+.user-account-menu {
+    display: flex;
 }
 
 .user-account-menu a {
+    display: block;
     font-size:16px;
     line-height: 18px;
     color: #32425c;
     text-decoration: underline;
+    margin-left: 18px;
 }
 
 .user-account-menu a:hover {
@@ -347,42 +633,71 @@ a {
 }
 
 .bread-crumb {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  text-transform: uppercase;
-}
+    display: flex;
+    margin: 0;
+    margin-bottom: 24px;
+    padding: 0;
 
-.bread-crumb ul {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
     list-style: none;
 }
 
 .bread-crumb a {
+    display: block;
+    margin-right: 15px;
+
     color: #000000;
 }
 
 .page-title {
+    margin: 0;
+    margin-bottom: 20px;
+
     font-size: 30px;
     line-height: 30px;
     color: #32425c;
     text-transform: uppercase;
+
+    background-color: #f2f6f8;
+}
+
+.catalog-section-wrapper {
+    display: flex;
+    margin-bottom: 60px;
 }
 
 .filters {
+    align-self: flex-start;
+    width: 220px;
+    margin-right: 20px;
     font-family: "PT Sans", Arial, sans-serif;
     color: #000000;
+
+    outline: 2px solid green;
 }
 
 .filters ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
-
+.sort-title,
+.sort {
+    background-color: #f7f3ec;
+}
 .filters h2,
-.item-catalog b {
+.item-catalog h2 {
+    margin: 0;
+    margin-left: 18px;
+
     font-size: 13px;
     line-height: 18px;
     font-weight: normal;
     text-transform: uppercase;
+    
 }
 
 .filters legend {
@@ -402,13 +717,48 @@ a {
     line-height: 18px;
 }
 
+.sort {
+    display: flex;
+    margin-bottom: 20px;
+    }
+
+.sort .sort-functions {
+    display: flex;
+}
+.sort-functions a {
+    display: block;
+
+    color: rgba(0, 0, 0, 0.3);
+}
 .item-catalog ul,
 .popular-items ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
+}
+
+.catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+    
+    outline: 2px solid green;
+    
+}
+
+.catalog-list li {
+    width: 220px;
+    margin-bottom: 20px;
+    border: 1px solid #ebebeb;
+}
+
+.catalog-list li:not(:nth-child(3n)) {
+    margin-right: 20px;
 }
 
 .popular-items-list .list-item-title,
 .catalog-list .catalog-item-title {
+    margin: 0;
     font-family: "PT Sans", Arial, sans-serif;
     color: #000000;
 }
@@ -476,9 +826,20 @@ a {
 .list-item-buttons .bookmarks-button:active {
     color: rgba(50, 66, 92, 0.3);
 
-    opacity: 30%;
+    
 }
 
-.about-items h2 {
+.pagination-list {
+    display: flex;
+        
+    outline: 2px solid green;
+}
 
+.about-items-wrapper {
+    background-color: #f2f6f8;
+}
+
+.about-items-container {
+    width: 940px;
+    margin: 0 auto;
 }
