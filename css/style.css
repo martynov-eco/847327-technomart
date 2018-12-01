@@ -22,10 +22,17 @@
   font-style: italic;
 }
 
+html { 
+    box-sizing: border-box; 
+}
+
+*, *::before, *::after {
+     box-sizing: inherit; 
+}
+
 body {
     margin: 0;
     padding: 0;
-
     font-family: "Cuprum", Arial, sans-serif;
 
     background-color: #ffffff;
@@ -70,9 +77,12 @@ a {
 }
 
 .header-top-container {
-    width: 940px;
+    width: 960px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin: 0 auto;
     display: flex;
+
     outline: 2px solid green;
 }
 
@@ -140,20 +150,22 @@ a {
     background-color: #518534;
 }
 
-.header-bottom-wrapper {
+.header-bottom {
     background-color: #f3f7f9;
-    margin-bottom: 23px;
+    
 }
 
 .header-bottom-container {
-    width: 940px;
+    width: 960px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin: 0 auto;
-    
+
+    outline: 2px solid green;
 }
 
 .header-bottom-container .company-info {
     display: flex;
-    outline: 2px solid green;
     padding-left: 50px;
 }
 
@@ -263,8 +275,12 @@ a {
 
 /** КРАСНАЯ ОБЛАСТЬ МАКЕТА, СТИЛИЗУЕМ ЕЕ ПОТОМ **/
 .main-wrapper {
-    width: 940px;
+    width: 960px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin: 0 auto;
+
+    outline: 2px solid green;
 }
 
 .popular-items h2,
@@ -294,7 +310,8 @@ a {
     justify-content: space-between;
     padding-left:30px;
     padding-right: 24px;
-    margin-bottom: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
     
     background-color: #f9f5f0;
     color: #32425c;
@@ -310,8 +327,9 @@ a {
     display: flex;
     justify-content: space-between;
     margin: 0;
-    margin-bottom: 20px;
     padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
     
     outline: 2px solid green;
 }
@@ -328,7 +346,8 @@ a {
     justify-content: space-between;
     padding-left:30px;
     padding-right: 24px;
-    margin-bottom: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
     
     background-color: #f9f5f0;
     color: #32425c;
@@ -347,6 +366,8 @@ a {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    padding-top: 20px;
+    padding-bottom: 65px;
 
     outline: 2px solid green;
 }
@@ -354,13 +375,14 @@ a {
 .brands-list li {
     width: 220px;
     height: 145px;
-    border: 1px solid #ebebeb; 
     margin-bottom: 20px;
+    border: 1px solid #ebebeb; 
+    
 }
 
 .service {
-    margin-bottom: 20px;
-
+    padding-top: 65px;
+   
     background-color: #f4f8fa;
 
     outline: 2px solid green;
@@ -369,7 +391,8 @@ a {
 .section-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 88px;
+    padding-top: 80px;
+    padding-bottom: 85px;
 
     outline: 2px solid green;
 }
@@ -399,18 +422,20 @@ a {
     width: 100%;
 }
 
-.footer-top-wrapper {
+.footer-top {
     background-color: #32425c;
 }
 
-.footer-bottom-wrapper {
+.footer-bottom {
     background-color: #293449;
 }
 
-.footer-top {
+.footer-top-container {
     display: flex;
     flex-wrap: wrap;
-    width: 940px;
+    width: 960px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin: 0 auto;
 
     font-size: 18px;
@@ -505,8 +530,10 @@ a {
     text-decoration: none;
 }
 
-.footer-bottom {
-    width: 940px;
+.footer-bottom-container {
+    width: 960px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin: 0 auto;
     display: flex;
 
@@ -635,8 +662,8 @@ a {
 .bread-crumb {
     display: flex;
     margin: 0;
-    margin-bottom: 24px;
-    padding: 0;
+    padding: 21px 0;
+    
 
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
@@ -654,8 +681,9 @@ a {
 
 .page-title {
     margin: 0;
-    margin-bottom: 20px;
-
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
     font-size: 30px;
     line-height: 30px;
     color: #32425c;
@@ -664,9 +692,9 @@ a {
     background-color: #f2f6f8;
 }
 
-.catalog-section-wrapper {
+.catalog-section-container {
     display: flex;
-    margin-bottom: 60px;
+    padding-top: 20px;
 }
 
 .filters {
@@ -684,6 +712,15 @@ a {
     padding: 0;
     list-style: none;
 }
+
+.filters fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+
+
 .sort-title,
 .sort {
     background-color: #f7f3ec;
@@ -740,8 +777,8 @@ a {
 .catalog-list {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 32px;
-    
+    width: 700px;
+            
     outline: 2px solid green;
     
 }
@@ -831,15 +868,33 @@ a {
 
 .pagination-list {
     display: flex;
-        
-    outline: 2px solid green;
+    
 }
-
-.about-items-wrapper {
+.pagination-list li {
+    padding-top: 32px;
+    padding-bottom: 60px;
+    border: 1px solid #ebebeb; 
+}
+.about-items {
     background-color: #f2f6f8;
 }
 
 .about-items-container {
-    width: 940px;
+    width: 960px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin: 0 auto;
+    padding-top: 64px;
+    padding-bottom: 72px;
+
+    outline: 2px solid green;
+}
+
+.about-items h2,
+.about-items p {
+    outline: 1px solid red;
+}
+
+.about-items h2 {
+    padding-bottom: 30px;
 }
