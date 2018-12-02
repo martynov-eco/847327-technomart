@@ -542,41 +542,67 @@ a {
     color: #ffffff;
 
     outline: 2px solid green;
-
     
-}
-
-.footer-bottom ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .footer-bottom .footer-copyrights {
     width: 230px;
+    margin: 0;
+    padding-top: 35px;
+    padding-bottom: 30px;
     margin-right: 160px;
 }
 
 .footer-bottom .social {
-    width: 135px;
+    display: flex;
+    justify-content: space-between;
+    width: 132px;
     margin-right: auto;
-
+    padding-top: 35px;
+    padding-bottom: 30px;
+        
     outline: 1px solid red;
 }
 
-.footer-bottom .social-button {
+.social .social-button {
+    display: block;
+    width: 40px;
+    height: 40px;
+        
     color: #ffffff;
-
+    text-indent: -1000px;
+        
     background-color: #212a3a;
+    border-radius: 50%;
+
+    outline: 1px solid yellow;
 }
 
-.footer-bottom .social-button:hover,
-.footer-bottom .social-button:active {
+.social .social-vk {
+    background-image: url("img/icon-vk.svg");
+    background-repeat: no-repeat;
+}
+
+.social .social-fb {
+    background-image: url("img/fb-icon.svg");
+    background-repeat: no-repeat;
+}
+
+.social .social-ig {
+    background-image: url("img/insta-icon.svg");
+    background-repeat: no-repeat;
+}
+
+.social .social-button:hover,
+.social .social-button:active {
     background-color: #ee3643;
 }
 
 .feedback {
     width: 140px;
+    margin: 0;
+    padding-top: 35px;
+    padding-bottom: 30px;
     margin-right: 20px;
 
     outline: 1px solid red;
@@ -584,6 +610,9 @@ a {
 
 .developers {
     width: 112px;
+    margin: 0;
+    padding-top: 35px;
+    padding-bottom: 30px;
 
     outline: 1px solid red;
 }
@@ -868,13 +897,35 @@ a {
 
 .pagination-list {
     display: flex;
+    padding-top: 22px;
+    padding-bottom: 50px;
     
 }
-.pagination-list li {
-    padding-top: 32px;
-    padding-bottom: 60px;
+.pagination-list a {
+    margin-right: 10px;
+    padding: 10px 15px;
+
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+
     border: 1px solid #ebebeb; 
 }
+.pagination-list .pagination-item-current {
+    color: #ffffff;
+
+    background-color: #ee3643;
+}
+
+.pagination-list a:hover {
+    border-color: #bdc6ca;
+}
+
+.pagination-list a:active {
+    border-color: #ee3643;
+}
+
 .about-items {
     background-color: #f2f6f8;
 }
