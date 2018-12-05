@@ -480,7 +480,7 @@ input[type="radio"].visually-hidden {
 }
 
 .promo {
-    min-height: 522px;
+    
     outline: 1px dotted green;
 }
 /** ТИТУЛ */
@@ -517,22 +517,25 @@ input[type="radio"].visually-hidden {
     margin: 0;
     padding: 0;
     padding-top: 18px;
-    padding-bottom: 20px;
+    padding-bottom: 18px;
 }
 
 .popular-items-list .list-item {
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     border: 1px solid #ebebeb;
-    
+}
 
+.popular-items-list .list-item:hover {
+    box-shadow: 0 0 12px #ccced3;
 }
 
 .popular-items-list .list-item:not(:last-child) {
     margin-right: 20px;
 }
 
-.list-item.new::after {
+.list-item.new::after,
+.promo-box.new::after {
     content: "";
     position: absolute;
     top: -2px;
@@ -545,7 +548,7 @@ input[type="radio"].visually-hidden {
 
 .popular-items-list h3 {
     margin: 0;
-    padding-top: 6px;
+    
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
@@ -560,17 +563,21 @@ input[type="radio"].visually-hidden {
 }
 
 .list-item-image {
-    /**display: flex;
+    position: relative;
+    display: flex;
     justify-content: center;
-    align-items: center;*/
+    align-items: center;
     margin: 0;
-    height: 170px;
-   
+    height: 180px;
+    text-align: center;
+    
     
 }
 
 .list-item-image img {
     outline: 1px solid yellow;
+    
+    
     
 }
 
@@ -583,6 +590,7 @@ input[type="radio"].visually-hidden {
     width: 142px;
     padding: 10px 35px;
     margin: 0 auto;
+    margin-bottom: -1px;
     
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 17px;
@@ -613,22 +621,65 @@ input[type="radio"].visually-hidden {
     background-color: #ee3643;
 }
 /** СКРЫТЫЕ КНОПКИ*/
-.list-item-buttons {
-    display: none;
-}
+
 
 .list-item-buttons {
+    
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-top: 45px;
+    padding-bottom: 52px;
+    width: 218px;
+    height: 180px;
+
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 14px;
     line-height: 18px;
     font-weight: normal;
+    
+    background-color: #ffffff;
+    opacity: 0;
 
 }
 
-.list-item-buttons .buy-button {
-    color: #ffffff;
+.list-item:hover .list-item-buttons {
+    opacity: 1;
+}
 
+.list-item-buttons .buy-button {
+    width: 135px;
+    position: relative;   
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 49px;
+    padding-right: 45px;
+    
+    color: #ffffff;
+    text-transform: uppercase;
+    
     background-color: #63a63e;
+    box-shadow: 0 3px #367315;
+    border-radius: 4px;
+}
+
+.list-item-buttons .buy-button::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 12px;
+    width: 20px;
+    height: 20px;
+
+    background: url("../img/icon-cart.svg") no-repeat 50% 50%;
+    opacity: 0.3;
+}
+
+.buy-button:hover::before {
+    opacity: 1;
 }
 
 .list-item-buttons .buy-button:hover {
@@ -640,10 +691,16 @@ input[type="radio"].visually-hidden {
 }
 
 .list-item-buttons .bookmarks-button {
+    width: 135px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     color: #32425c;
+    text-transform: uppercase;
 
     border-color: #63a63e;
     background-color: #ffffff;
+    border-radius: 4px;
 }
 
 .list-item-buttons .bookmarks-button:hover {
@@ -1053,6 +1110,7 @@ input[type="radio"].visually-hidden {
     margin: 0;
     padding: 0;
     border: none;
+    border-bottom: 1px solid black;
 }
 
 
@@ -1249,7 +1307,153 @@ input[type="radio"].visually-hidden {
     padding-bottom: 30px;
 }
 
+/**PROMO BLOCK*******************************/
+.promo {
+    padding-top: 58px;
+    padding-bottom: 53px;
+}
 
+.promo-container1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
 
+.promo-box {
+    width: 300px;
+    padding-top: 21px;
+    padding-left: 23px;
+    padding-bottom: 22px;
+    position: relative;
+}
 
+.promo-box b {
+    display: block;
+    margin-bottom: 12px;
 
+    font-size: 24px;
+    line-height: 30px;
+    color: #ffffff;
+}
+
+.promo-box a {
+    display: block;
+    width: 135px;
+    padding-top: 11px;
+    padding-bottom: 9px;
+    padding-left: 24px;
+    margin-left: 2px;
+    position: relative;
+
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;   
+}
+
+.promo-box a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.promo-box a:active {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.promo-box.materials {
+    background-color: #ffbf47;
+}
+
+.promo-box.materials::after {
+    content: "";
+    position: absolute;
+    top: 29px;
+    right: 42px;
+    width: 46px;
+    height: 68px;
+
+    background: url("../img/promo-icon-1.svg") no-repeat 50% 50%;
+}
+
+.promo-box.tool {
+    background-color: #3bbce3;
+}
+
+.promo-box.tool::after {
+    content: "";
+    position: absolute;
+    top: 32px;
+    right: 27px;
+    width: 77px;
+    height: 63px;
+
+    background: url("../img/promo-icon-2.svg") no-repeat 50% 50%;
+}
+
+.promo-box.technic {
+    background-color: #dc91d8;
+}
+
+.technic a {
+    padding-left: 30px;
+}
+
+.promo-box.technic::after {
+    content: "";
+    position: absolute;
+    top: 31px;
+    right: 30px;
+    width: 80px;
+    height: 64px;
+
+    background: url("../img/promo-icon-3.svg") no-repeat 50% 50%;
+}
+
+.promo-box.sale {
+    background-color: #8ed78f;
+    margin-bottom: 19px;
+}
+
+.promo-box.sale::after {
+    content: "";
+    position: absolute;
+    top: 27px;
+    right: 44px;
+    width: 61px;
+    height: 72px;
+
+    background: url("../img/promo-icon-4.svg") no-repeat 50% 50%;
+}
+
+.promo-box.delivery {
+    padding-top: 22px;
+    background-color: #ffc047;
+}
+
+.delivery a {
+    padding-left: 37px;
+}
+
+.promo-box.delivery::after {
+    content: "";
+    position: absolute;
+    top: 32px;
+    right: 31px;
+    width: 79px;
+    height: 64px;
+
+    background: url("../img/promo-icon-5.svg") no-repeat 50% 50%;
+}
+
+.promo-box.slide {
+    width: 620px;
+    margin-right: 20px;
+    outline: 1px solid red;
+    background-color: rgba (255, 71, 119, 0.3)
+}
+
+.promo-container2 {
+    display: flex;
+}
