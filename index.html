@@ -113,7 +113,7 @@
                   <h2>Популярные товары:</h2>
                   <a class="button button-section-title" href="#">Все популярные товары</a>
               </div>
-              <ul class="popular-items-list">
+              <ul class="catalog-list">
                 <li class="list-item">
                     
                     <div class="list-item-image">
@@ -382,22 +382,26 @@
       <section class="modal modal-write-us">
           <h2 class="visually-hidden">Напишите нам</h2>
           <form class="write-us-form" action="/echo" method="post">
-              <div class="user-name">
-                  <label for="users-name">Ваше имя:</label>
-                  <input type="text" id="users-name" placeholder="Имя Фамилия">
+              <div class="modal-container1">
+                    <div class="user-name">
+                        <label for="users-name">Ваше имя:</label>
+                        <input type="text" id="users-name" placeholder="Имя Фамилия">
+                    </div>
+                    <div class="user-email">
+                        <label for="users-email">Ваш e-mail:</label>
+                        <input type="email" id="users-email" placeholder="example@mail.ru">
+                    </div>
+                    <div class="user-message">
+                        <label for="users-message">Текст письма</label>
+                        <textarea id="users-message" placeholder="В свободной форме"></textarea>
+                    </div>
               </div>
-              <div class="user-email">
-                  <label for="users-email">Ваш e-mail:</label>
-                  <input type="email" id="users-email" placeholder="example@mail.ru">
+              <div class="modal-container1">
+                  <button class="button button-send">Отправить</button>
               </div>
-              <div class="user-message">
-                  <label for="users-message">Текст письма</label>
-                  <textarea id="users-message" placeholder="В свободной форме"></textarea>
-              </div>
-              <div class="button-send-column">
-              </div>
-              <button class="modal-close" type="button">Закрыть</button>
+              
           </form>
+          <button class="modal-close" type="button">Закрыть</button>
       </section>
 
 
