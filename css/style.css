@@ -382,31 +382,26 @@ input[type="radio"].visually-hidden {
     margin-right: 10px;
 }
 
-.account .account-login::before {
-    content: "";
+.account-login svg {
     position: absolute;
     top: 12px;
     left: 14px;
     width: 20px;
     height: 20px;
-
-    background: url("../img/icon-login.svg") no-repeat 50% 50%;
 }
 
-.account .account-login:hover::before {
-    background: url("../img/icon-login-hover.svg") no-repeat 50% 50%;
+.account-login:hover path {
+    fill: #32425c;
 }
 
-.account .account-login:active::before {
-    background: url("../img/icon-login.svg") no-repeat 50% 50%;
+.account-login:active path {
+    fill: #c5c5c5;
 }
 
 .account .account-reg {
     padding-left: 24px;
     padding-right: 24px;
 }
-
-/**----------------*/
 
 .header-bottom-container .main-nav {
     display: flex;
@@ -883,8 +878,6 @@ h1.page-title {
     padding: 0;
     padding-top: 20px;
     padding-bottom: 65px;
-
-    outline: 1px dotted green;
 }
 
 .brands-list a {
@@ -902,13 +895,21 @@ h1.page-title {
     box-shadow: 0 7px 25px 5px #ccced3;
 }
 
+.brands-list a:active {
+    box-shadow: 0 7px 25px 1px #ccced3;
+}
+
+.list-item:active img {
+    opacity: 0.3;
+}
+
 .service {
     min-height: 520px; /** времменно ****/
     padding-top: 65px;
    
     background-color: #f4f8fa;
 
-    outline: 2px solid green;
+    outline: 1px dotted green;
 }
 .service h2 {
     margin-bottom: 28px;
@@ -935,7 +936,6 @@ h1.page-title {
     padding-top: 80px;
     padding-bottom: 85px;
 
-    outline: 2px solid green;
 }
 
 .section-wrapper .about-us {
@@ -1091,8 +1091,6 @@ h1.page-title {
     margin: 0;
     padding: 0;
     
-    
-    
 }
 
 .first-nav-list a {
@@ -1115,7 +1113,6 @@ h1.page-title {
     margin: 0;
     padding: 0;
 
-    
 }
 
 .second-nav-list a {
@@ -1268,31 +1265,38 @@ h1.page-title {
     color: #000000;
 }
 
-.user-account-login .user::before {
-    content: "";
+.user-account-login .user-icon {
     position: absolute;
     top: 12px;
     left: 14px;
     width: 20px;
     height: 20px;
-
-    background: url("../img/icon-user.svg") no-repeat 50% 50%;
 }
 
-.user-account-login .logout::before {
-    content: "";
+.user:hover path {
+    fill: #32425c;
+}
+
+.user:active path {
+    fill: #c5c5c5;
+}
+
+.user-account-login .logout-icon {
     position: absolute;
     top: 12px;
     right: -9px;
     width: 20px;
     height: 20px;
-
-    background: url("../img/icon-logout.svg") no-repeat 50% 50%;
 }
 
-.user-account-login a:active {
-    color: rgba(0, 0, 0, 0.3);
+.logout:hover path {
+    fill: #32425c;
 }
+
+.logout:active path {
+    fill: #c5c5c5;
+}
+
 
 .user-account .user-account-menu {
     display: flex;
@@ -1629,6 +1633,12 @@ h1.page-title {
     line-height: 18px; 
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.3);
+    
+    border-bottom: 1px dotted #ee3643;
+}
+.sort-functions .sort-button:hover {
+    color: rgba(0, 0, 0, 1);
+    border-bottom: 1px solid #ee3643;
 }
 
 .sort-button.price {
@@ -1640,7 +1650,32 @@ h1.page-title {
 }
 
 .sort-button.function {
-    margin-right: 46px;
+    margin-right: 45px;
+}
+
+.sort-button.up {
+    margin-right: 20px;
+    opacity: 0.3;
+    border-bottom: none;
+}
+
+.sort-button.down {
+   opacity: 0.3;
+   border-bottom: none;
+}
+
+.sort-button.up:hover,
+.sort-button.down:hover {
+    border-bottom: none;
+    opacity: 1;
+}
+
+.sort-button.active,
+.active path {
+    color: #ee3643;
+    fill: #ee3643;
+    opacity: 1;
+    border-bottom: none;
 }
 
 .item-catalog .catalog-list {
@@ -1725,30 +1760,38 @@ h1.page-title {
 }
 
 .modal-write-us {
-    display: block;
+    display: ;
     position: absolute;
     top: 50%;
     left: 50%;
     width: 620px;
-    padding: 46px 60px 0 80px;
+    
 
     background-color: #ffffff;
     box-shadow: 0 -7px #ee3643;
 
-    outline: 1px solid green;
 }
 
-.write-us-form {
+.modal-write-us .modal-container1 {
     display: flex;
     flex-wrap: wrap;
+    padding: 45px 80px 37px 80px;
+
 }
 
-/**.write-us-form div {
+.modal-write-us .modal-container2 {
+    padding: 47px 80px 37px 80px;
+
+    background-color: #f4f4f4;
+
+}
+
+.modal-container1 div {
     display: flex;
     flex-direction: column;
     width: 220px;
 
-}*/
+}
 
 .write-us-form label {
     margin-bottom: 10px;
@@ -1761,7 +1804,6 @@ h1.page-title {
 
 .write-us-form .user-message {
     width: 460px;
-    margin-bottom: 74px;
     height: 114px;
 }
 
@@ -1807,7 +1849,7 @@ h1.page-title {
 /**************************************************/
 
 .modal-cart {
-    display: block;
+    display: ;
     position: absolute;
     top: 50%;
     left: 50%;
