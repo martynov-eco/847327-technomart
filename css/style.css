@@ -690,8 +690,8 @@ h1.page-title {
 .promo-box.new::after {
     content: "";
     position: absolute;
-    top: -2px;
-    right: 0px;
+    top: -3px;
+    right: -1px;
     width: 60px;
     height: 60px;
 
@@ -735,10 +735,12 @@ h1.page-title {
 .previous-price {
     display: block;
     width: 142px;
-    padding: 10px 35px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    padding-left: 35px;
+    padding-right: 35px;
     margin: 0 auto;
-    margin-bottom: -1px;
-    
+        
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 17px;
     font-weight: 700;
@@ -755,7 +757,10 @@ h1.page-title {
 .current-price {
     display: block;
     width: 140px;
-    padding: 10px 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin: 0 36px 0 42px;
 
     font-family: "PT Sans", Arial, sans-serif;
@@ -774,12 +779,12 @@ h1.page-title {
     
     position: absolute;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /*justify-content: center;*/
     align-items: center;
-    flex-wrap: wrap;
+    
+    padding-top: 42px;
     margin: 0;
-    padding-top: 45px;
-    padding-bottom: 52px;
     width: 218px;
     height: 180px;
 
@@ -800,8 +805,9 @@ h1.page-title {
 .list-item-buttons .buy-button {
     width: 135px;
     position: relative;   
-    padding-top: 8px;
-    padding-bottom: 8px;
+    margin-bottom: 11px;
+    padding-top: 10px;
+    padding-bottom: 7px;
     padding-left: 49px;
     padding-right: 45px;
     
@@ -840,12 +846,12 @@ h1.page-title {
 .list-item-buttons .bookmarks-button {
     width: 135px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 6px;
 
     color: #32425c;
     text-transform: uppercase;
 
-    border-color: #63a63e;
+    border: 3px solid #63a63e;
     background-color: #ffffff;
     border-radius: 4px;
 }
@@ -857,6 +863,8 @@ h1.page-title {
 
 .list-item-buttons .bookmarks-button:active {
     color: rgba(50, 66, 92, 0.3);
+
+    border-color: #c1c6ce;
 
     
 }
@@ -933,7 +941,7 @@ h1.page-title {
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding-top: 80px;
+    padding-top: 82px;
     padding-bottom: 85px;
 
 }
@@ -1169,8 +1177,7 @@ h1.page-title {
     height: 40px;
             
     color: #ffffff;
-    text-indent: -1000px;
-        
+    font-size: 0;        
     background-color: #212a3a;
     border-radius: 50%;
 }
@@ -1608,6 +1615,7 @@ h1.page-title {
 
     background-color: #ffffff;
     border: 1px solid #e5e5e5;
+    cursor: pointer;
 }
 
 .sort {
@@ -1692,9 +1700,6 @@ h1.page-title {
     padding-bottom: 19px;
 }
 
-.item-catalog .previous-price {
-    margin-bottom:
-}
 
 .pagination-list {
     display: flex;
@@ -1745,7 +1750,7 @@ h1.page-title {
     padding-right: 10px;
     margin: 0 auto;
     padding-top: 65px;
-    padding-bottom: 27px;
+    padding-bottom: 29px;
 }
 
 .about-items-container p {
@@ -1760,33 +1765,34 @@ h1.page-title {
 }
 
 .modal-write-us {
-    display: ;
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
     width: 620px;
-    
+    transform: translate(-50%, -50%);
 
     background-color: #ffffff;
-    box-shadow: 0 -7px #ee3643;
+    box-shadow: 0 -7px #ee3643,
+                0 7px 60px #000000;
 
 }
 
-.modal-write-us .modal-container1 {
+.modal-write-us .modal-form-container {
     display: flex;
     flex-wrap: wrap;
     padding: 45px 80px 37px 80px;
 
 }
 
-.modal-write-us .modal-container2 {
+.modal-write-us .modal-button-container {
     padding: 47px 80px 37px 80px;
 
     background-color: #f4f4f4;
 
 }
 
-.modal-container1 div {
+.modal-form-container div {
     display: flex;
     flex-direction: column;
     width: 220px;
@@ -1827,10 +1833,7 @@ h1.page-title {
     height: 114px;
 }
 
-.button-send-column {
-    background-color: #f4f4f4;
-    outline: 1px solid red;
-}
+
 
 .button-send {
     width: 100%;
@@ -1842,6 +1845,7 @@ h1.page-title {
 
 .modal-close {
     position: absolute;
+    cursor: pointer;
     right: 0;
     top: 0;
 }
@@ -1849,24 +1853,25 @@ h1.page-title {
 /**************************************************/
 
 .modal-cart {
-    display: ;
+    display: block;
     position: absolute;
+    width: 620px;
     top: 50%;
     left: 50%;
-    width: 620px;
-    
+    transform: translate(-50%, -50%);
     background-color: #ffffff;
-    box-shadow: 0 -7px #ee3643;
+    box-shadow: 0 -7px #ee3643,
+                0 7px 60px #293449;
 
 }
 
-.modal-cart-container1 .modal-wrapper {
+.message-container .modal-wrapper {
     padding-top: 62px;
     padding-bottom: 68px;
     padding-left: 180px;
 }
 
-.modal-cart-container1 b {
+.message-container b {
     display: block;
     position: relative;
     font-size: 30px;
@@ -1875,7 +1880,7 @@ h1.page-title {
 
 }
 
-.modal-cart-container1 b::before {
+.message-container b::before {
     position: absolute;
     content: "";
 
@@ -1888,18 +1893,18 @@ h1.page-title {
     background: url("../img/icon-modal-order.svg")
 }
 
-.modal-cart-container2 {
+.order-container {
     background-color: #f1f1f1;
 }
 
-.modal-cart-container2 .modal-wrapper {
+.order-container .modal-wrapper {
     padding-top: 37px;
     padding-bottom: 38px;
     padding-left: 80px;
 }
 
-.modal-cart-container2 .button-ordering,
-.modal-cart-container2 .button-continue {
+.order-container .button-ordering,
+.order-container .button-continue {
     display: inline-block;
     width: 220px;
     padding: 0;
@@ -1907,13 +1912,13 @@ h1.page-title {
     padding-bottom: 10px;
 }
 
-.modal-cart-container2 .button-ordering {
+.order-container .button-ordering {
     margin-right: 16px;
 }
 
-.modal-cart-container2 .button-continue {
+.order-container .button-continue {
     text-transform: uppercase;
-
+    cursor: pointer;
     background-color: #ffffff;
     border: none;
 }
