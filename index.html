@@ -387,7 +387,8 @@
 
 			<section class="modal modal-map">
 					<h2 class="visually-hidden">Как до нас добраться</h2>
-					<img src="img/big-map.jpg" width="940" height="446" alt="Схема проезда в магазин по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+					<iframe src="https://yandex.ru/map-widget/v1/-/CBFTuIG92C" width="940" height="446" frameborder="1" allowfullscreen="true"></iframe>
+					<div><img src="img/big-map.jpg" width="940" height="446" alt="Схема проезда в магазин по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></div>
 					<button class="modal-close" type="button">Закрыть</button>
 			</section>
 
@@ -414,5 +415,23 @@
 					</form>
 					<button class="modal-close" type="button">Закрыть</button>
 			</section>
+
+			<section class="modal modal-cart">
+                <h2 class="visually-hidden">Окно оформления заказа</h2>
+                <div class="message-container">
+                    <div class="modal-wrapper">
+                        <b>Товар добавлен в корзину!</b>
+                    </div>
+                </div>
+                <div class="order-container">
+                    <div class="modal-wrapper">
+                        <a class="button button-ordering" href="#">Оформить заказ</a>
+                        <button type="button" class="button-continue">Продолжить покупки</button>
+                    </div>
+                </div>
+                <button class="modal-close" type="button">Закрыть</button>
+			</section>
+
+			<script src="js/script.js"></script>
 	</body>
 </html>

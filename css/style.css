@@ -2321,6 +2321,10 @@ h1.page-title {
 		display: none;
 }
 
+.modal-show {
+	display: block;
+}
+
 .modal-write-us {
 		position: fixed;
 		top: 50%;
@@ -2336,6 +2340,7 @@ h1.page-title {
 								0 7px 60px #000000;
 						box-shadow: 0 -7px #ee3643,
 								0 7px 60px #000000;
+		z-index: 150;
 
 }
 
@@ -2428,6 +2433,8 @@ h1.page-title {
 		background-position: 50% 50%;
 		border: none;
 		cursor: pointer;
+
+		z-index: 10;
 }
 
 .modal-map {
@@ -2444,8 +2451,23 @@ h1.page-title {
 		background-color: #ffffff;
 		-webkit-box-shadow: 0 0 32px -5px #000000;
 						box-shadow: 0 0 32px -5px #000000;
+		
+		z-index: 150;
 }
 
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
+.modal-map div {
+  position: absolute;
+  top: 0;
+  left: 0;
+	z-index: 1;
+}
 /**************************************************/
 
 .modal-cart {
@@ -2521,4 +2543,5 @@ h1.page-title {
 		background-color: #ffffff;
 		border: none;
 }
+
 
