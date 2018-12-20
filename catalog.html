@@ -5,7 +5,7 @@
 				<title>HTML Academy: Техномарт</title>
 				<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 				<link href="css/normalize.css" rel="stylesheet">
-				<link href="css/style.css" rel="stylesheet">
+				<link href="css/style.min.css" rel="stylesheet">
 		</head>
 		<body>
 				<header class="page-header">
@@ -121,7 +121,7 @@
 																<ul class="producers-filter">
 																		<li>
 																				<label class="producers-checkbox">
-																						<input type="checkbox" name="bosch" class="visually-hidden">
+																						<input type="checkbox" name="bosch" class="visually-hidden" checked>
 																						<span class="checkbox-indicator"></span>
 																						Bosch
 																				</label>
@@ -135,7 +135,7 @@
 																		</li>
 																		<li>
 																				<label class="producers-checkbox">
-																						<input type="checkbox" name="makita" class="visually-hidden">
+																						<input type="checkbox" name="makita" class="visually-hidden" checked>
 																						<span class="checkbox-indicator"></span>
 																						Makita
 																				</label>
@@ -161,7 +161,7 @@
 																<ul class="power-type-filter">
 																		<li>
 																				<label class="producers-radio">
-																						<input type="radio" name="power-type" class="visually-hidden">
+																						<input type="radio" name="power-type" class="visually-hidden" checked>
 																						<span class="radio-indicator"></span>
 																						Аккумуляторные
 																				</label>
@@ -173,7 +173,7 @@
 																						Сетевые
 																				</label>
 																		</li>
-																</ul>
+																</ul>																
 														</fieldset>
 														<button class="result-button" type="submit">Показать</button>
 												</form>
@@ -205,6 +205,7 @@
 												</div>
 												<h2 class="visually-hidden">Список перфораторов</h2>
 												<ul class="catalog-list">
+														<div class="catalog-list-container">
 														<li class="list-item">
 																<div class="list-item-image">
 																		<img src="img/bosch-3000.jpg" width="218" height="180" alt="Перфоратор BOSCH BFG 3000">
@@ -331,15 +332,16 @@
 																		<span class="previous-price no-discount">12500 Р.</span>
 																		<b class="current-price">12500 Р.</b>
 															</div>
-													</li>
-											</ul>
-											<div class="pagination-list">
-													<a class="pagination-item pagination-item-current">1</a>
-													<a class="pagination-item" href="catalog/page-2.html">2</a>
-													<a class="pagination-item" href="catalog/page-3.html">3</a>
-													<a class="pagination-item backward" href="catalog/previous-page.html">Назад</a>
-													<a class="pagination-item next" href="catalog/next-page.html">Следующая</a>
+													</li>											
 											</div>
+									</ul>
+									<div class="pagination-list">
+											<a class="pagination-item pagination-item-current">1</a>
+											<a class="pagination-item" href="catalog/page-2.html">2</a>
+											<a class="pagination-item" href="catalog/page-3.html">3</a>
+											<a class="pagination-item backward" href="catalog/previous-page.html">Назад</a>
+											<a class="pagination-item next" href="catalog/next-page.html">Следующая</a>
+									</div>
 									</section>
 							</div>
 					</div>
@@ -414,6 +416,6 @@
 						</div>
 						<button class="modal-close" type="button">Закрыть</button>
 				</section>
-				<script src="js/script-catalog.js"></script>
+				<script src="js/script-catalog.min.js"></script>
 		</body>
 </html>
