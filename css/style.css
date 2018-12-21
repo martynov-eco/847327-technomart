@@ -1,7 +1,7 @@
 @font-face {
 		font-family: "Cuprum";
 		src: url("../fonts/cuprum.woff2") format("woff2"),
-				url("../fonts/cuprum.woff") format("woff");
+					url("../fonts/cuprum.woff") format("woff");
 		font-weight: normal;
 		font-style: normal;
 }
@@ -175,6 +175,8 @@ input[type="radio"].visually-hidden {
 }
 
 .header-logo {
+		z-index: 1;
+
 		width: 220px;
 		padding-top: 9px;
 		padding-bottom: 8px;
@@ -187,8 +189,6 @@ input[type="radio"].visually-hidden {
 		background-color: #ee3643;
 		-webkit-box-shadow: 0 5px #b52933;
 						box-shadow: 0 5px #b52933;
-
-		z-index: 1;
 }
 
 .header-logo:hover {
@@ -203,7 +203,6 @@ input[type="radio"].visually-hidden {
 		position: relative;
 
 		display: block;
-
 		width: 270px;
 }
 
@@ -230,11 +229,11 @@ input[type="radio"].visually-hidden {
 		width: 100%;
 		height: 42px;
 		padding-left: 48px;
+		border: none;
 
 		line-height: 18px;
 
 		background-color: #293449;
-		border: none;
 }
 
 .search-form input[type="search"]:hover {
@@ -349,9 +348,9 @@ input[type="radio"].visually-hidden {
 }
 
 .order-button {
+		width: 150px;
 		padding-top: 12px;
 		padding-bottom: 12px;
-		width: 150px;
 
 		text-align: center;
 
@@ -374,16 +373,17 @@ input[type="radio"].visually-hidden {
 
 .header-bottom-container {
 		width: 960px;
+		margin: 0 auto;
 		padding-left: 10px;
 		padding-right: 10px;
 		padding-bottom: 65px;
-		margin: 0 auto;
 }
 
 .header-bottom-container ul {
-		list-style: none;
 		margin: 0;
 		padding: 0;
+
+		list-style: none;
 }
 
 .header-bottom-container a {
@@ -424,12 +424,12 @@ input[type="radio"].visually-hidden {
 		position: relative;
 
 		display: block;
-		border: 3px solid #ffffff;
+		margin-bottom: 5px;
 		padding-top: 9px;
 		padding-bottom: 9px;
 		padding-left: 70px;
 		padding-right: 49px;
-		margin-bottom: 5px;
+		border: 3px solid #ffffff;
 
 		font-size: 21px;
 		line-height: 21px;
@@ -494,9 +494,9 @@ input[type="radio"].visually-hidden {
 .account .account-login {
 		position: relative;
 
+		margin-right: 10px;
 		padding-left: 48px;
 		padding-right: 25px;
-		margin-right: 10px;
 }
 
 .account-login svg {
@@ -571,9 +571,9 @@ input[type="radio"].visually-hidden {
 
 .container {
 		width: 960px;
+		margin: 0 auto;
 		padding-left: 10px;
 		padding-right: 10px;
-		margin: 0 auto;
 }
 
 .promo {
@@ -750,18 +750,18 @@ input[type="radio"].visually-hidden {
 .promo-slider .arrow {
 		position: absolute;
 		top: 43%;
+		z-index: 100;
 
 		width: 22px;
 		height: 40px;
+		border: none;
 		
 		font-size: 0;
 
-		border: none;
 		background-color: transparent;
 		background-image: url("../img/icon-left.svg");
 		background-repeat: no-repeat;
 		cursor: pointer;
-		z-index: 100;
 }
 
 .promo-slider .arrow-left {
@@ -770,6 +770,7 @@ input[type="radio"].visually-hidden {
 
 .promo-slider .arrow-right {
 		right: 3%;
+
 		-webkit-transform: rotate(180deg);
 				-ms-transform: rotate(180deg);
 						transform: rotate(180deg);
@@ -832,6 +833,7 @@ input[type="radio"].visually-hidden {
 
 		text-align: center;
 		font-size: 0;
+
 		-webkit-transform: translateX(-50%);
 				-ms-transform: translateX(-50%);
 						transform: translateX(-50%);
@@ -849,7 +851,6 @@ input[type="radio"].visually-hidden {
 		
 		border-radius: 50%;
 		cursor: pointer;
-		
 		background-color: #ffffff;
 }
 
@@ -865,6 +866,7 @@ input[type="radio"].visually-hidden {
 
 		text-align: center;
 		font-size: 0;
+
 		-webkit-transform: translateX(-50%);
 				-ms-transform: translateX(-50%);
 						transform: translateX(-50%);
@@ -936,8 +938,9 @@ h1.page-title {
 		padding-top: 26px;
 		padding-bottom: 26px;
 
-		background-color: #f9f5f0;
 		color: #32425c;
+
+		background-color: #f9f5f0;
 }
 
 .popular-items h2,
@@ -1023,6 +1026,7 @@ h1.page-title {
 
 		padding-left: 20px;
 		padding-right: 20px;
+
 		text-align: center;
 }
 
@@ -1055,11 +1059,11 @@ h1.page-title {
 		display: block;
 		width: 142px;
 		min-height: 36px;
+		margin: 0 auto;
 		padding-top: 10px;
 		padding-bottom: 8px;
 		padding-left: 35px;
 		padding-right: 35px;
-		margin: 0 auto;
 
 		font-family: "PT Sans", Arial, sans-serif;
 		font-size: 17px;
@@ -1075,11 +1079,11 @@ h1.page-title {
 
 		display: block;
 		width: 140px;
+		margin: 0 36px 0 42px;
 		padding-top: 10px;
 		padding-bottom: 10px;
 		padding-left: 10px;
 		padding-right: 10px;
-		margin: 0 36px 0 42px;
 
 		font-family: "PT Sans", Arial, sans-serif;
 		font-size: 17px;
@@ -1176,6 +1180,7 @@ h1.page-title {
 
 .list-item-buttons .bookmarks-button {
 		color: #32425c;
+
 		background: white;
 		border-bottom-color: #63a63e;
 }
@@ -1227,13 +1232,12 @@ h1.page-title {
 		display: flex;
 		-webkit-box-pack: center;
 				-ms-flex-pack: center;
-						justify-content: center;
+			justify-content: center;
 		-webkit-box-align: center;
 				-ms-flex-align: center;
-						align-items: center;
+					align-items: center;
 		width: 220px;
 		height: 145px;
-
 		border: 1px solid #ebebeb; 
 }
 
@@ -1566,10 +1570,10 @@ h1.page-title {
 		-ms-flex-wrap: wrap;
 				flex-wrap: wrap;
 		width: 960px;
+		margin: 0 auto;
 		padding-left: 10px;
 		padding-right: 10px;
 		padding-bottom: 48px;
-		margin: 0 auto;
 
 		font-size: 18px;
 		line-height: 24px;
@@ -1678,13 +1682,13 @@ h1.page-title {
 }
 
 .footer-bottom-container {
-		width: 960px;
-		padding-left: 10px;
-		padding-right: 10px;
-		margin: 0 auto;
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
+		width: 960px;
+		margin: 0 auto;
+		padding-left: 10px;
+		padding-right: 10px;
 
 		font-size: 16px;
 		line-height: 18px;
@@ -1694,9 +1698,9 @@ h1.page-title {
 .footer-bottom .footer-copyrights {
 		width: 240px;
 		margin: 0;
+		margin-right: 150px;
 		padding-top: 35px;
 		padding-bottom: 30px;
-		margin-right: 150px;
 }
 
 .footer-bottom .social {
@@ -1751,9 +1755,9 @@ h1.page-title {
 .feedback {
 		width: 140px;
 		margin: 0;
+		margin-right: 52px;
 		padding-top: 35px;
 		padding-bottom: 30px;
-		margin-right: 52px;
 }
 
 .developers {
@@ -1810,8 +1814,8 @@ h1.page-title {
 		position: absolute;
 		top: 12px;
 		left: 14px;
-		width: 20px;
 
+		width: 20px;
 		height: 20px;
 }
 
@@ -1827,6 +1831,7 @@ h1.page-title {
 		position: absolute;
 		top: 12px;
 		right: -9px;
+
 		width: 20px;
 		height: 20px;
 }
@@ -1905,6 +1910,7 @@ h1.page-title {
 
 .bread-crumb-item {
 		position: relative;
+
 		margin-right: 25px;
 }
 
@@ -2092,17 +2098,18 @@ h1.page-title {
 		margin: 0;
 		padding-left: 5px;
 		padding-right: 5px;
+		border: none;
 
 		color: inherit;
 		font: inherit;
 		text-align: center;
 
 		background: none;
-		border: none;
 }
 
 .price-controls .min-price {
 		position: relative;
+
 		margin-right: 25px;
 }
 
@@ -2252,7 +2259,6 @@ h1.page-title {
 		text-transform: uppercase;
 
 		background-color: #ffffff;
-
 		cursor: pointer;
 }
 
@@ -2525,10 +2531,10 @@ h1.page-title {
 
 .button-send {
 		width: 100%;
-		border: none;
 		padding: 0;
 		padding-top: 10px;
 		padding-bottom: 10px;
+		border: none;
 }
 
 .modal-close {
@@ -2539,6 +2545,7 @@ h1.page-title {
 
 		width: 27px;
 		height: 27px;
+		border: none;
 
 		font-size: 0;
 
@@ -2546,7 +2553,6 @@ h1.page-title {
 		background-image: url("../img/icon-close.svg");
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
-		border: none;
 		cursor: pointer;
 }
 
@@ -2584,10 +2590,11 @@ h1.page-title {
 
 .modal-cart {
 		position: fixed;
-		width: 620px;
 		top: 50%;
 		left: 50%;
 		z-index: 150;
+
+		width: 620px;
 
 		background-color: #ffffff;
 		-webkit-box-shadow: 0 -7px #ee3643,
